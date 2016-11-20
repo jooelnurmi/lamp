@@ -4,7 +4,9 @@ class lamp{
 		package {"apache2":}
 		package {"ssh":}
 		package {"php7.0":}
-		package {"libapache2-mod-php":}
+		package {"libapache2-mod-php":
+			require => Package ["apache2"],
+	}
 		package {"mysql-client":}
 		package {"mysql-server":}
 	
