@@ -17,8 +17,11 @@ class lamp{
 
 	}
 	
+	file {"/home/xubuntu/public_html":
+		ensure => "directory",
+	}	
 
-	file{"/home/xubuntu/public_html/index.php":
+	file{"/home/xubuntu/public_html/index.php": 
 		content => template("lamp/index.php"),
 	}
 
